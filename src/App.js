@@ -49,13 +49,17 @@ export const App = () => {
 		setColaboradores([...colaboradores, colaborador])
 	}
 
+	const deleteCollaborator = () => {
+		console.log("%cApp.js line:53 delete collab", "color: #26bfa5;")
+	}
+
 	return (
 		<div className="App">
 			<Banner />
 			<Formulario times={times.map((time) => time.nome)} aoColaboradorCadastrado={(colaborador) => aoNovoColaboradorAdicionado(colaborador)} />
 
 			{times.map((time) => (
-				<Team key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria} colaboradores={colaboradores.filter((colaborador) => colaborador.time === time.nome)} />
+				<Team key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria} colaboradores={colaboradores.filter((colaborador) => colaborador.time === time.nome)} onDelete={deleteCollaborator} />
 			))}
 		</div>
 	)
