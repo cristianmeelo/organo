@@ -217,7 +217,10 @@ export const App = () => {
 
   const [collaborators, setCollaborators] = useState(initialCollaborators);
 
-  const aoNovoColaboradorAdicionado = (collaborator) => setCollaborators([...collaborators, collaborator]);
+  const onNewCollaboratorAdded = (collaborator) => setCollaborators([...collaborators, collaborator]);
+  const onNewTeamAdded = (newTeam) => {
+    setTeams([...teams, { ...newTeam, id: uuidv4() }]);
+  };
 
   const deleteCollaborator = (id) => {
     setCollaborators(collaborators.filter((collaborator) => collaborator.id !== id));
@@ -237,7 +240,7 @@ export const App = () => {
   return (
     <div className="App">
       <Banner />
-      <Form teams={teams.map((team) => team.name)} aoColaboradorCadastrado={(collaborator) => aoNovoColaboradorAdicionado(collaborator)} />
+      <Form teams={teams.map((team) => team.name)} onCollaboratorAdded={(collaborator) => onNewCollaboratorAdded(collaborator)} onTeamAdded={onNewTeamAdded} />
       <section className="times">
         <h1>Minha organização</h1>
         {teams.map((team, index) => (
