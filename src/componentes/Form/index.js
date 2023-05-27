@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Botao from "../Botao";
-import CampoTexto from "../CampoTexto";
+import { Field } from "../Field";
 import ListaSuspensa from "../ListaSuspensa";
 import "./Formulario.css";
+import { Button } from "../Button";
 
 export const Form = ({ teams, onCollaboratorAdded, onTeamAdded }) => {
   const [name, setName] = useState("");
@@ -27,27 +27,31 @@ export const Form = ({ teams, onCollaboratorAdded, onTeamAdded }) => {
   };
 
   return (
-    <section className="formulario">
-      <form onSubmit={onSaveCollaborator}>
-        <h2>Preencha os dados para criar o card do colaborador</h2>
-        <CampoTexto obrigatorio label="Nome" placeholder="Digite seu nome" valor={name} aoAlterado={(valor) => setName(valor)} />
-        <CampoTexto obrigatorio label="Cargo" placeholder="Digite seu cargo" valor={role} aoAlterado={(valor) => setRole(valor)} />
-        <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem" valor={image} aoAlterado={(valor) => setImage(valor)} />
-        <ListaSuspensa obrigatorio label="Time" itens={teams} valor={team} aoAlterado={(valor) => setTeam(valor)} />
-        <Botao>Criar Card</Botao>
-      </form>
+    <section className="formulario-container">
+      <section className="formulario">
+        <form onSubmit={onSaveCollaborator}>
+          <h2>Preencha os dados para criar o card do colaborador</h2>
+          <Field required label="Nome" placeholder="Digite seu nome" value={name} aoAlterado={(value) => setName(value)} />
+          <Field required label="Cargo" placeholder="Digite seu cargo" value={role} aoAlterado={(value) => setRole(value)} />
+          <Field label="Imagem" placeholder="Digite o endereço da imagem" value={image} aoAlterado={(value) => setImage(value)} />
+          <ListaSuspensa required label="Time" itens={teams} value={team} aoAlterado={(value) => setTeam(value)} />
+          <Button>Criar Card</Button>
+        </form>
+      </section>
 
-      <form
-        onSubmit={(event) => {
-          event.preventDefault();
-          onTeamAdded({ name: teamName, color: teamColor });
-        }}
-      >
-        <h2>Preencha os dados para criar um novo Time</h2>
-        <CampoTexto obrigatorio label="Nome" placeholder="Digite o nome do time" valor={teamName} aoAlterado={(valor) => setTeamName(valor)} />
-        <CampoTexto obrigatorio label="Cor" placeholder="Digite a cor do time" valor={teamColor} aoAlterado={(valor) => setTeamColor(valor)} />
-        <Botao>Criar um novo Time</Botao>
-      </form>
+      <section className="formulario">
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            onTeamAdded({ name: teamName, color: teamColor });
+          }}
+        >
+          <h2>Preencha os dados para criar um novo time</h2>
+          <Field required label="Nome" placeholder="Digite o nome do time" value={teamName} aoAlterado={(value) => setTeamName(value)} />
+          <Field type="color" required label="Cor" placeholder="Digite a cor do time" value={teamColor} aoAlterado={(value) => setTeamColor(value)} />
+          <Button>Criar um novo Time</Button>
+        </form>
+      </section>
     </section>
   );
 };
