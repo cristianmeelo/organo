@@ -4,7 +4,7 @@ import CampoTexto from "../CampoTexto";
 import ListaSuspensa from "../ListaSuspensa";
 import "./Formulario.css";
 
-const Formulario = (props) => {
+export const Form = (props) => {
   const [name, setName] = useState("");
   const [cargo, setCargo] = useState("");
   const [imagem, setImagem] = useState("");
@@ -37,5 +37,3 @@ const Formulario = (props) => {
     </section>
   );
 };
-
-export default Formulario;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Banner from "./componentes/Banner";
-import Formulario from "./componentes/Formulario";
+import { Form } from "./componentes/Form";
 import { Team } from "./componentes/Team/index";
 
 export const App = () => {
@@ -57,7 +57,7 @@ export const App = () => {
   return (
     <div className="App">
       <Banner />
-      <Formulario times={teams.map((time) => time.name)} aoColaboradorCadastrado={(colaborador) => aoNovoColaboradorAdicionado(colaborador)} />
+      <Form times={teams.map((time) => time.name)} aoColaboradorCadastrado={(colaborador) => aoNovoColaboradorAdicionado(colaborador)} />
 
       {teams.map((time) => (
         <Team key={time.name} name={time.name} color={time.color} colaboradores={colaboradores.filter((colaborador) => colaborador.time === time.name)} changeColor={handleChangeTeamColor} onDelete={deleteCollaborator} />
