@@ -219,8 +219,8 @@ export const App = () => {
 
   const aoNovoColaboradorAdicionado = (collaborator) => setCollaborators([...collaborators, collaborator]);
 
-  const deleteCollaborator = () => {
-    console.log("%cApp.js line:53 delete collab", "color: #26bfa5;");
+  const deleteCollaborator = (id) => {
+    setCollaborators(collaborators.filter((collaborator) => collaborator.id !== id));
   };
 
   const handleChangeTeamColor = (color, id) => {
