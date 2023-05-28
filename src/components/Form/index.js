@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Field } from "../Field";
 import { DropdownList } from "../DropdownList/index";
 import { Button } from "../Button";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./index.css";
 
 export const Form = ({ teams, onCollaboratorAdded, onTeamAdded }) => {
@@ -24,7 +26,20 @@ export const Form = ({ teams, onCollaboratorAdded, onTeamAdded }) => {
     setRole("");
     setImage("");
     setTeam("");
+    notify("colaborador");
   };
+
+  const notify = (typeCreated) =>
+    toast(`🥳 ${typeCreated} adicionado!`, {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
 
   return (
     <section className="form-container">
@@ -44,6 +59,7 @@ export const Form = ({ teams, onCollaboratorAdded, onTeamAdded }) => {
           onSubmit={(event) => {
             event.preventDefault();
             onTeamAdded({ name: teamName, color: teamColor });
+            notify("Time");
           }}
         >
           <h2>Preencha os dados para criar um novo time</h2>
@@ -52,6 +68,7 @@ export const Form = ({ teams, onCollaboratorAdded, onTeamAdded }) => {
           <Button>Criar um novo Time</Button>
         </form>
       </section>
+      <ToastContainer />
     </section>
   );
 };
