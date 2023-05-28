@@ -27,7 +27,7 @@ Organo is a prototype of an application to manage teams and collaborators.
 
 ## 🔨 Project features
 
-Organo is a team and collaborator manager prototype. In it, you can create teams, define colors for each team, add and delete collaborators to the teams, and even favorite them! This project emphasizes componentization, in addition to working with forms, it explores the idea of ​​an application and development of the input type `color`.
+Organo is a team and collaborator manager prototype. In it, you can create teams, define edit colors for each team, add and delete collaborators to the teams, and even favorite them! This project emphasizes componentization, in addition to working with forms, it explores the idea of ​​an application and development of the input type `color`.
 
 ## ⚙️ Techniques and technologies used
 
@@ -45,6 +45,12 @@ Check out this list of everything we will use in this app:
 To open and run the project, run `npm i` to install the dependencies and `npm start` to start the project.
 
 Then go to <a href="http://localhost:3000/">http://localhost:3000/</a> in your browser.
+
+- **Create Team** : To create a team, fill in the name, choose a color for the team and click on `Create a new Team`, when you have a collaborator added, it will be displayed;
+- **Change Team Color** : To change the color of a team, just use the `picker-color` positioned at the top right of the team section.
+- **Create Collaborator** : To create a collaborator, fill in the name, position, enter an image address and choose a team for the collaborator;
+- **Delete Collaborator** : To delete a collaborator, click on the icon represented by an X on the upper border of the collaborator's card, he will be automatically removed from the team and excluded from the platform;
+- **Favorite Collaborator** : To favorite a collaborator, click on the icon represented by a heart just below the collaborator's job description on your card.
 
 ## 📚 More tutorial information
 
