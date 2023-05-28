@@ -281,7 +281,7 @@ export const App = () => {
     <div className="App">
       <Banner />
       <Form teams={teams.map((team) => team.name)} onCollaboratorAdded={(collaborator) => onNewCollaboratorAdded(collaborator)} onTeamAdded={onNewTeamAdded} />
-      <section className="times">
+      <section className="teams">
         <h1>Minha organização</h1>
         {teams.map((team, index) => (
           <Team key={index} id={team.id} name={team.name} color={team.color} collaborators={collaborators.filter((collaborator) => collaborator.team === team.name)} changeColor={handleChangeTeamColor} onDelete={deleteCollaborator} onFavorite={handleFavorite} />
