@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid"; // imported as alias
-import Banner from "./components/Banner";
+import { Banner } from "./components/Banner";
 import { Form } from "./components/Form";
 import { Team } from "./components/Team/index";
 import { Footer } from "./components/Footer";
