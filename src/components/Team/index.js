@@ -1,5 +1,5 @@
 import hexToRgba from "hex-to-rgba";
-import { Collaborator } from "../Colaborador";
+import { Collaborator } from "../Collaborator";
 import "./index.css";
 
 export const Team = ({ name, color, collaborators, onDelete, changeColor, id, onFavorite }) => {

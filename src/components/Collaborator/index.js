@@ -12,13 +12,13 @@ export const Collaborator = ({ id, name, image, role, backgroundColor, onDelete,
   };
 
   return (
-    <div className="colaborador">
+    <div className="collaborator">
       <AiFillCloseCircle size={25} className="delete" onClick={() => onDelete(id)} />
 
-      <div className="cabecalho" style={{ backgroundColor: backgroundColor }}>
+      <div className="header" style={{ backgroundColor: backgroundColor }}>
         <img src={image} alt={name} />
       </div>
-      <div className="rodape">
+      <div className="info">
         <h4>{name}</h4>
         <h5>{role}</h5>
         <div className="favorite">{isFavorite ? <AiFillHeart {...propsFavorite} color="red" /> : <AiOutlineHeart {...propsFavorite} />}</div>
