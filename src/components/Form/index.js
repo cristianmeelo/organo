@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Field } from "../Field";
-import ListaSuspensa from "../ListaSuspensa";
+import { DropdownList } from "../DropdownList/index";
 import "./Formulario.css";
 import { Button } from "../Button";
 
@@ -34,7 +34,7 @@ export const Form = ({ teams, onCollaboratorAdded, onTeamAdded }) => {
           <Field required label="Nome" placeholder="Digite seu nome" value={name} aoAlterado={(value) => setName(value)} />
           <Field required label="Cargo" placeholder="Digite seu cargo" value={role} aoAlterado={(value) => setRole(value)} />
           <Field label="Imagem" placeholder="Digite o endereço da imagem" value={image} aoAlterado={(value) => setImage(value)} />
-          <ListaSuspensa required label="Time" itens={teams} value={team} aoAlterado={(value) => setTeam(value)} />
+          <DropdownList required label="Time" itens={teams} value={team} aoAlterado={(value) => setTeam(value)} />
           <Button>Criar Card</Button>
         </form>
       </section>
