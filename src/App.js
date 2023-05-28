@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid"; // imported as alias
-import Banner from "./componentes/Banner";
-import { Form } from "./componentes/Form";
-import { Team } from "./componentes/Team/index";
-import { Footer } from "./componentes/Footer";
+import Banner from "./components/Banner";
+import { Form } from "./components/Form";
+import { Team } from "./components/Team/index";
+import { Footer } from "./components/Footer";
 
 export const App = () => {
   const [teams, setTeams] = useState([
