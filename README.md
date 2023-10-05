@@ -1,5 +1,3 @@
-UEE
-
 <table align="right">
   <tr>
     <td>
@@ -13,18 +11,21 @@ UEE
   </tr>
 </table>
 
-![](https://github.com/cristianmeelo/organo/blob/main/thumbnail.png?raw=true#vitrinedev)
+![](https://github.com/cristianmeelo/organo/blob/main/thumbnail.png?raw=true)
+
+![](https://github.com/cristianmeelo/organo/blob/main/thumbnail-mockup.png?raw=true#vitrinedev)
+
+<div align="center">
+<a href="https://organo-cristianmeelo.vercel.app/">
+  <img src="https://img.shields.io/badge/-confira%20aqui-lightblue" alt="Image App" >
+</a>
+</div>
+
+<br/>
 
 # Organo
 
 A Organo é um protótipo de uma aplicação de gerenciar times e colaboradores.
-
-<img src="screencapture.png" alt="Image App" >
-<div align="center">
-<a href="https://organo-cristianmeelo.vercel.app/">
-  <img src="https://img.shields.io/badge/-confira%20aqui-lightgrey" alt="Image App" >
-</a>
-</div>
 
 ## 🔨 Recursos do projeto
 

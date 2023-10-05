@@ -11,19 +11,22 @@
   </tr>
 </table>
 
-![](https://github.com/cristianmeelo/organo/blob/main/thumbnail-en.png?raw=true#vitrinedev)
+![](https://github.com/cristianmeelo/organo/blob/main/thumbnail-en.png?raw=true)
+
+![](https://github.com/cristianmeelo/organo/blob/main/thumbnail-mockup.png?raw=true#vitrinedev)
+
+<div align="center">
+<a href="https://organo-cristianmeelo.vercel.app/">
+  <img src="https://img.shields.io/badge/-CHECK%20HERE-lightblue"
+  alt="Image App" >
+</a>
+</div>
+
+<br/>
 
 # Organo
 
 Organo is a prototype of an application to manage teams and collaborators.
-
-<img src="screencapture.png" alt="Image App" >
-<div align="center">
-<a href="https://organo-cristianmeelo.vercel.app/">
-  <img src="https://img.shields.io/badge/-check%20here-lightgrey"
-  alt="Image App" >
-</a>
-</div>
 
 ## 🔨 Project features
 
