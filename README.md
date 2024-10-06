@@ -40,6 +40,8 @@ Confira essa lista de tudo que vamos usar nesse app:
 - `JavaScript`
 - `HTML`
 - `CSS`
+- `React-icons`
+- `REact-toastify`
 - `GitHub`
 
 ## 🛠️ Abra e execute o projeto
